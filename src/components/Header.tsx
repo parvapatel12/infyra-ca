@@ -9,8 +9,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) => {
   const handleInstagramClick = () => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://instagram.com/infyra' });
-    window.open('https://instagram.com', '_blank');
+    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
+    window.open('https://www.instagram.com/infyra.ca', '_blank');
   };
 
   return (
@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
         <span className="text-base">🇨🇦</span>
         <span>Tested & Certified to Strict Canadian Safety Standards</span>
         <span className="hidden sm:inline-block border-l border-white/30 pl-2.5 font-semibold text-white/90">
-          100% Food-Grade Silicone • BPA-Free • Fast Prime Shipping via Amazon CA
+          100% Food-Grade Silicone • BPA-Free • Fast Shipping via Amazon CA
         </span>
       </div>
 
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
               <span className="hidden md:inline">AI Guide</span>
             </button> */}
 
-            <button
+            {/* <button
               onClick={onOpenAnalytics}
               className="relative inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold text-white bg-[#54758D] hover:bg-[#3F5B70] rounded-xl transition-all shadow-xs"
               title="Store Owner Analytics Dashboard"
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
               <BarChart3 className="w-4 h-4 text-emerald-300" />
               <span className="hidden lg:inline">Owner Stats</span>
               <span className="lg:hidden">Stats</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

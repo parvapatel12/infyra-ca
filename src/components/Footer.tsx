@@ -9,16 +9,16 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) => {
   const handleInstagramClick = () => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://instagram.com/infyra' });
-    window.open('https://instagram.com', '_blank');
+    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
+    window.open('https://www.instagram.com/infyra.ca', '_blank');
   };
 
-  const handleAmazonMainClick = () => {
+  const handleAmazonMainClick = (url: string) => () => {
     AnalyticsService.trackEvent('amazon_click', {
       productName: 'Amazon CA Storefront (Footer)',
-      targetUrl: 'https://www.amazon.ca/dp/B0GT3BSXPW?th=1',
+      targetUrl: url,
     });
-    window.open('https://www.amazon.ca/dp/B0GT3BSXPW?th=1', '_blank');
+    window.open(url, '_blank');
   };
 
   return (
@@ -34,11 +34,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-[#E5624E] flex items-center justify-center text-2xl shadow-xs border-2 border-white/20">
-                🧸
-              </div>
+              {/* <div className="w-12 h-12 rounded-2xl bg-[#E5624E] flex items-center justify-center text-2xl shadow-xs border-2 border-white/20">
+                
+              </div> */}
+              <img src="/assets/BrandLogo2.png" alt="Infyra Logo" className="w-12 h-12 object-contain" />
               <div>
-                <span className="text-2xl font-heading font-extrabold text-white tracking-wider">INFYRA</span>
+                <span className="text-2xl font-heading font-extrabold text-white tracking-wider">infyra</span>
                 <p className="text-xs font-bold text-[#F5C2B9] font-heading">cuddle • play • comfort</p>
               </div>
             </div>
@@ -60,26 +61,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
             </p>
             <ul className="space-y-2 text-xs font-semibold text-slate-300">
               <li>
-                <button onClick={handleAmazonMainClick} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
-                  <ExternalLink className="w-3.5 h-3.5 text-[#849C81] shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                <button onClick={handleAmazonMainClick('https://www.amazon.ca/dp/B0GT3BSXPW?th=1')} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                   <span>Infyra Fresh Green 2-in-1 Rattle Teether</span>
                 </button>
               </li>
               <li>
-                <button onClick={handleAmazonMainClick} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
-                  <ExternalLink className="w-3.5 h-3.5 text-[#54758D] shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                  <span>Infyra Dusty Blue 2-in-1 Rattle Teether</span>
+                <button onClick={handleAmazonMainClick('https://www.amazon.ca/dp/B0GT7VPW43?th=1')} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                  <span>Infyra Ocean Blue 2-in-1 Rattle Teether</span>
                 </button>
               </li>
               <li>
-                <button onClick={handleAmazonMainClick} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                <button onClick={handleAmazonMainClick('https://www.amazon.ca/dp/B0GT8KX85H')} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                   <span>Infyra Grey Crocodile Pop-It Teether</span>
                 </button>
               </li>
               <li>
-                <button onClick={handleAmazonMainClick} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
-                  <ExternalLink className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                <button onClick={handleAmazonMainClick('https://www.amazon.ca/dp/B0GSPTTHSH')} className="hover:text-[#F5C2B9] transition-colors flex items-center gap-2 text-left group">
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                   <span>Infyra Silicone Crab Teether</span>
                 </button>
               </li>
@@ -100,21 +101,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
                 <span>Instagram @infyra.ca</span>
               </button>
 
-              <button
+              {/* <button
                 onClick={onOpenAnalytics}
                 className="w-full inline-flex items-center gap-2 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold rounded-2xl transition-all border border-slate-700"
               >
                 <BarChart3 className="w-4 h-4 text-emerald-400" />
                 <span>Store Owner Analytics</span>
-              </button>
+              </button> */}
 
-              <button
+              {/* <button
                 onClick={onOpenGuide}
                 className="w-full inline-flex items-center gap-2 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold rounded-2xl transition-all border border-slate-700"
               >
                 <Sparkles className="w-4 h-4 text-amber-400" />
                 <span>infyra.ca AI Guide</span>
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -122,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
 
         {/* Bottom Legal Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-400">
-          <p>© {new Date().getFullYear()} INFYRA Brand (infyra.ca). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Infyra (infyra.ca). All rights reserved.</p>
           <p className="flex items-center gap-1.5 text-amber-300">
             <span>Crafted with care for Canadian parents & growing babies 💖</span>
           </p>

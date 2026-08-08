@@ -7,9 +7,9 @@ export const Hero: React.FC = () => {
   const handleAmazonCaMainClick = () => {
     AnalyticsService.trackEvent('amazon_click', {
       productName: 'Amazon CA Storefront Redirect (Hero)',
-      targetUrl: 'https://www.amazon.ca/dp/B0GT3BSXPW?th=1',
+      targetUrl: 'https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2',
     });
-    window.open('https://www.amazon.ca/dp/B0GT3BSXPW?th=1', '_blank');
+    window.open('https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2', '_blank');
   };
 
   return (
@@ -24,8 +24,9 @@ export const Hero: React.FC = () => {
             <div className="inline-flex items-center gap-2 bg-[#EBF1F5] border-2 border-[#CBD8E1] px-4 py-1.5 rounded-full text-xs font-extrabold text-[#54758D] shadow-xs">
               <span className="text-base">🍁</span>
               <span>Proudly Canadian Brand</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E5624E]" />
-              <span className="text-[#E5624E] lowercase font-extrabold">infyra.ca</span>
+              <span className="text-base">🍁</span>
+              {/* <span className="w-1.5 h-1.5 rounded-full bg-[#E5624E]" /> */}
+              {/* <span className="text-[#E5624E] lowercase font-extrabold">infyra.ca</span> */}
             </div>
 
             {/* Main Headline */}
@@ -97,7 +98,7 @@ export const Hero: React.FC = () => {
             {/* Amazon Fulfillment Note */}
             <p className="text-xs text-[#5B6B76] font-extrabold flex items-center justify-center lg:justify-start gap-1.5 pt-1">
               <Sparkles className="w-4 h-4 text-[#E5624E]" />
-              <span>Fulfilled by Amazon Canada for fast Prime delivery across all provinces!</span>
+              <span>Fulfilled by Amazon Canada for fast delivery across all provinces!</span>
             </p>
 
           </div>
@@ -116,7 +117,8 @@ export const Hero: React.FC = () => {
               {/* 2x2 Visual Cards */}
               <div className="grid grid-cols-2 gap-3">
                 <a href="#products" className="group bg-[#EFF4EE] p-3.5 rounded-2xl border-2 border-[#849C81] hover:bg-[#E2ECE1] transition-all flex flex-col items-center text-center shadow-xs">
-                  <TeetherVisual type="rattle-green" size="sm" />
+                  {/* <TeetherVisual type="rattle-green" size="sm" /> */}
+                  <img src="/assets/RattleTeetherGreen1.png" alt="Rattle Teether Green" className="w-30 h-30 h-full object-contain drop-shadow-md" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#849C81]">
                     Fresh Green
                   </span>
@@ -124,15 +126,17 @@ export const Hero: React.FC = () => {
                 </a>
 
                 <a href="#products" className="group bg-[#EBF1F5] p-3.5 rounded-2xl border-2 border-[#54758D] hover:bg-[#DDE8F0] transition-all flex flex-col items-center text-center shadow-xs">
-                  <TeetherVisual type="rattle-blue" size="sm" />
+                  {/* <TeetherVisual type="rattle-blue" size="sm" /> */}
+                  <img src="/assets/RattleTeetherBlue1.png" alt="Rattle Teether Blue" className="w-30 h-30 h-full object-contain drop-shadow-md" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#54758D]">
-                    Dusty Blue
+                    Ocean Blue
                   </span>
                   <span className="text-[10px] font-bold text-[#54758D]">2-in-1 Rattle</span>
                 </a>
 
                 <a href="#products" className="group bg-[#F1F5F9] p-3.5 rounded-2xl border-2 border-[#64748B] hover:bg-[#E2E8F0] transition-all flex flex-col items-center text-center shadow-xs">
-                  <TeetherVisual type="crocodile-grey" size="sm" />
+                  {/* <TeetherVisual type="crocodile-grey" size="sm" /> */}
+                  <img src="/assets/CrocodileTeether1.png" alt="Crocodile Teether" className="w-25 h-25 h-full object-contain drop-shadow-md" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#64748B]">
                     Slate Grey
                   </span>
@@ -140,9 +144,10 @@ export const Hero: React.FC = () => {
                 </a>
 
                 <a href="#products" className="group bg-[#FEF3C7] p-3.5 rounded-2xl border-2 border-[#D97706] hover:bg-[#FDE68A] transition-all flex flex-col items-center text-center shadow-xs">
-                  <TeetherVisual type="crab-yellow" size="sm" />
+                  {/* <TeetherVisual type="crab-yellow" size="sm" /> */}
+                  <img src="/assets/CrabTeether1.png" alt="Crab Teether" className="w-30 h-30 h-full object-contain drop-shadow-md" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#D97706]">
-                    Cream & Yellow
+                    Cream Yellow
                   </span>
                   <span className="text-[10px] font-bold text-[#B45309]">Silicone Crab</span>
                 </a>

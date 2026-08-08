@@ -12,7 +12,7 @@ export interface StoryStop {
 export const INFYRA_STORY_STOPS: StoryStop[] = [
   {
     id: 'design-dome',
-    postNumber: 4,
+    postNumber: 1,
     title: 'First Stop: Design & Imagination',
     facilityName: 'The Dream Design Dome 🎨',
     vibe: 'Creative, artistic, and full of oversized sketchpads and felt buttons.',
@@ -22,7 +22,7 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'materials-meadow',
-    postNumber: 5,
+    postNumber: 2,
     title: 'Second Stop: Premium Material Sourcing',
     facilityName: 'The Pure Materials Meadow 🌿',
     vibe: 'Fresh, clean, organic, and ultra-safe.',
@@ -32,17 +32,17 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'manufactory',
-    postNumber: 6,
+    postNumber: 3,
     title: 'Third Stop: Engineering & Molding',
     facilityName: 'The Make-Believe Manufactory ⚙️',
     vibe: 'Smart, cool, and playful with turning wooden gears and clear windows.',
-    story: 'Cruising down Bubblegum River on a wooden tugboat! Here, raw materials are precision-molded into our signature Fresh Green Rattle, Dusty Blue Teether, Crocodile Pop-It, and Crab Teether with flawless accuracy.',
+    story: 'Cruising down Bubblegum River on a wooden tugboat! Here, raw materials are precision-molded into our signature Fresh Green Rattle, Ocean Blue Teether, Crocodile Pop-It, and Crab Teether with flawless accuracy.',
     iconName: 'Cog',
     badgeColor: 'bg-amber-100 text-amber-800 border-amber-200',
   },
   {
     id: 'safety-castle',
-    postNumber: 7,
+    postNumber: 4,
     title: 'Fourth Stop: Safety Testing & Compliance',
     facilityName: 'The Care & Compliance Castle 🏰 🍁',
     vibe: 'Extremely secure, trustworthy, and distinctly Canadian.',
@@ -52,7 +52,7 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'perfection-pavilion',
-    postNumber: 8,
+    postNumber: 5,
     title: 'Fifth Stop: Hand Quality Inspection',
     facilityName: 'The Quality-Care Quarters 🔍',
     vibe: 'Meticulous, detailed, and reassuring for parents.',
@@ -62,7 +62,7 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'fulfillment-station',
-    postNumber: 9,
+    postNumber: 6,
     title: 'Sixth Stop: Logistics & Packing',
     facilityName: 'The Parcel & Promise Station 📦',
     vibe: 'Busy, cheerful, and organized like a giant gift box.',
@@ -72,7 +72,7 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'parent-support',
-    postNumber: 10,
+    postNumber: 7,
     title: 'Seventh Stop: Parent Support & Community',
     facilityName: 'The Care & Comfort Cottage ☎️',
     vibe: 'Warm, welcoming, helpful, and community-first.',
@@ -82,7 +82,7 @@ export const INFYRA_STORY_STOPS: StoryStop[] = [
   },
   {
     id: 'grand-arrival',
-    postNumber: 11,
+    postNumber: 8,
     title: 'Final Stop: Welcome Home',
     facilityName: 'Infyra Land Arrival Gates 🎪 ☀️',
     vibe: 'Ultimate celebration of joy, happiness, and baby comfort!',

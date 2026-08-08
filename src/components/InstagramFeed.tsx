@@ -4,9 +4,9 @@ import { AnalyticsService } from '../services/analytics';
 import { Instagram, ExternalLink, Heart, MessageCircle } from 'lucide-react';
 
 export const InstagramFeed: React.FC = () => {
-  const handleInstagramClick = () => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://instagram.com/infyra' });
-    window.open('https://instagram.com', '_blank');
+  const handleInstagramClick = (url: string) => {
+    AnalyticsService.trackEvent('instagram_click', { targetUrl: url });
+    window.open(url, '_blank');
   };
 
   return (
@@ -43,37 +43,19 @@ export const InstagramFeed: React.FC = () => {
           {INSTAGRAM_POSTS.map((post) => (
             <div
               key={post.id}
-              onClick={handleInstagramClick}
-              className="group cursor-pointer bg-[#FFFBF6] rounded-3xl p-5 border-2 border-[#E4DCD0] hover:border-[#54758D] transition-all shadow-xs flex flex-col justify-between"
+              onClick={() => handleInstagramClick(post.url)}
+              className="group cursor-pointer bg-[#FFFBF6] rounded-3xl p-2 border-2 border-[#E4DCD0] hover:border-[#54758D] transition-all shadow-xs flex flex-col justify-between"
             >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-heading font-extrabold text-[#54758D] bg-[#EBF1F5] px-3 py-0.5 rounded-full border border-[#CBD8E1] shadow-2xs">
-                    Post #{post.id} • {post.postType}
-                  </span>
-                  <span className="text-xs font-bold text-[#5B6B76]">{post.date}</span>
-                </div>
-
-                <h3 className="text-lg font-heading font-extrabold text-[#23313B] group-hover:text-[#E5624E] transition-colors">
-                  {post.title}
-                </h3>
-
-                <p className="text-xs text-[#5B6B76] line-clamp-3 leading-relaxed font-semibold">
-                  {post.caption}
-                </p>
-
-                {/* Hashtags */}
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {post.hashtags.map((tag, idx) => (
-                    <span key={idx} className="text-[10px] font-bold text-[#849C81] bg-[#EFF4EE] px-2.5 py-0.5 rounded-full border border-[#849C81]">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-heading font-extrabold text-[#54758D] bg-[#EBF1F5] px-3 py-0.5 mb-2 rounded-full border border-[#CBD8E1] shadow-2xs">
+                  Post #{post.id} • {post.postType}
+                </span>
+                <span className="text-xs font-bold text-white">{post.date}</span>
               </div>
+              <img src={post.imagePath} alt={post.title} className="w-full h-full object-cover rounded-2xl" />
 
               {/* Engagement Bar */}
-              <div className="flex items-center justify-between pt-4 mt-4 border-t-2 border-[#E4DCD0] text-xs text-[#5B6B76]">
+              <div className="flex items-center justify-between p-4 pb-2 mt-4 border-t-2 border-[#E4DCD0] text-xs text-[#5B6B76]">
                 <div className="flex items-center gap-3">
                   <span className="flex items-center gap-1 font-bold text-[#E5624E]">
                     <Heart className="w-4 h-4 fill-[#E5624E] text-[#E5624E]" />
@@ -81,7 +63,7 @@ export const InstagramFeed: React.FC = () => {
                   </span>
                   <span className="flex items-center gap-1 font-bold text-[#5B6B76]">
                     <MessageCircle className="w-4 h-4 text-[#54758D]" />
-                    <span>Community</span>
+                    <span>Comments</span>
                   </span>
                 </div>
 

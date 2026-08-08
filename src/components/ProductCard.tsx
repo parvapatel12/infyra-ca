@@ -3,6 +3,7 @@ import { Product } from '../types';
 import { AnalyticsService } from '../services/analytics';
 import { TeetherVisual } from './TeetherVisual';
 import { ExternalLink, Star, CheckCircle2, Eye } from 'lucide-react';
+import { TeetherImage } from './TeetherImage';
 
 interface ProductCardProps {
   product: Product;
@@ -89,7 +90,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
 
         {/* Center Visual Box */}
         <div className={`w-full aspect-square ${theme.visualBg} rounded-2xl flex items-center justify-center mb-4 border border-black/5`}>
-          <TeetherVisual type={product.svgType} size="md" />
+          {/* <TeetherVisual type={product.svgType} size="md" /> */}
+          <TeetherImage type={product.svgType} size="md" />
         </div>
 
         {/* Product Meta */}

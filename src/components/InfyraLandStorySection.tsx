@@ -91,11 +91,9 @@ export const InfyraLandStorySection: React.FC = () => {
           </div>
 
           <div className="lg:col-span-4 bg-[#EBF1F5] rounded-3xl p-6 flex flex-col items-center justify-center text-center border-2 border-[#CBD8E1] space-y-3">
-            <div className="w-16 h-16 rounded-3xl bg-white text-[#23313B] flex items-center justify-center shadow-xs text-3xl font-bold border-2 border-[#54758D]">
-              🧸
-            </div>
-            <p className="text-xs font-extrabold text-[#54758D] font-heading uppercase tracking-wider">Brand Philosophy</p>
-            <p className="text-base font-heading font-extrabold text-[#E5624E]">"cuddle • play • comfort"</p>
+            <img src="/assets/BrandLogo2.png" alt="Infyra Logo" className="w-20 h-20 h-full object-contain" />
+            <img src="/assets/BrandLogoName1.png" alt="Infyra Name" className="w-40 h-40 h-full object-contain" />
+            {/* <p className="text-xs font-extrabold text-[#54758D] font-heading uppercase tracking-wider">Brand Philosophy</p> */}
             <p className="text-xs text-[#5B6B76] font-semibold leading-relaxed">
               Building a safe, beautiful space for your little ones to grow and explore!
             </p>

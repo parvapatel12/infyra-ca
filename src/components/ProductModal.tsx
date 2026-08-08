@@ -3,6 +3,7 @@ import { Product } from '../types';
 import { AnalyticsService } from '../services/analytics';
 import { TeetherVisual } from './TeetherVisual';
 import { X, ExternalLink, ShieldCheck, CheckCircle2, Copy, Check, Star, Sparkles, Heart } from 'lucide-react';
+import { TeetherImage } from './TeetherImage';
 
 interface ProductModalProps {
   product: Product | null;
@@ -36,7 +37,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-[#FAF4EC] hover:bg-[#FDEEEB] text-[#23313B] hover:text-[#E5624E] flex items-center justify-center transition-colors shadow-2xs border border-[#E4DCD0]"
+          className="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-[#FAF4EC] hover:bg-[#FDEEEB] text-[#23313B] hover:text-[#E5624E] flex items-center justify-center transition-colors shadow-2xs border border-[#E4DCD0]"
           title="Close Modal"
         >
           <X className="w-5 h-5" />
@@ -51,7 +52,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               {product.badge}
             </div>
 
-            <TeetherVisual type={product.svgType} size="lg" />
+            <TeetherImage type={product.svgType} size="lg" />
 
             {/* Quick Dimensions Box */}
             <div className="w-full bg-[#FFFBF6] rounded-2xl p-4 mt-6 border-2 border-[#E4DCD0] shadow-2xs text-center space-y-1">
@@ -61,6 +62,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               <div className="flex items-center justify-center gap-3 text-xs text-[#23313B] pt-1 font-bold">
                 <span>Height: <strong className="text-[#E5624E]">{product.dimensions.height}</strong></span>
                 <span>Width: <strong className="text-[#E5624E]">{product.dimensions.width}</strong></span>
+                <span>Weight: <strong className="text-[#E5624E]">{product.dimensions.weight}</strong></span>
               </div>
               {product.dimensions.handleOpening && (
                 <p className="text-[11px] text-[#5B6B76] pt-0.5 font-semibold">

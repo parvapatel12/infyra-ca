@@ -31,7 +31,9 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF4EC] text-[#23313B] font-sans antialiased selection:bg-[#FDEEEB] selection:text-[#E5624E]">
+    <div className="min-h-screen bg-[#FAF4EC] text-[#23313B] font-sans antialiased selection:bg-[#FDEEEB] selection:text-[#E5624E]"
+      style={{ backgroundImage: 'url(/assets/BackgroundPattern.png)', backgroundRepeat: 'repeat', backgroundSize: 'auto'}}
+    >
       
       {/* Header */}
       <Header
@@ -91,7 +93,7 @@ export default function App() {
                   : 'text-[#5B6B76] hover:bg-[#EBF1F5]'
               }`}
             >
-              Dusty Blue
+              Ocean Blue
             </button>
             <button
               onClick={() => setFilterColor('crocodile')}
@@ -135,16 +137,16 @@ export default function App() {
             </div>
             <div>
               <p className="text-lg font-heading font-extrabold text-white">Direct Fast Delivery via Amazon Canada 🇨🇦</p>
-              <p className="text-xs text-white/90 font-bold mt-0.5">All product links take visitors directly to our official Amazon CA listing for fast Prime shipping across provinces!</p>
+              <p className="text-xs text-white/90 font-bold mt-0.5">All product links take visitors directly to our official Amazon CA listing for fast shipping across provinces!</p>
             </div>
           </div>
           <a
-            href="https://www.amazon.ca/dp/B0GT3BSXPW?th=1"
+            href="https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2"
             target="_blank"
             rel="noreferrer"
             className="shrink-0 px-7 py-3.5 bg-[#54758D] hover:bg-[#3F5B70] text-white text-xs font-extrabold rounded-2xl shadow-xs transition-all inline-flex items-center gap-2 border border-[#3F5B70]"
           >
-            <span>Visit Amazon CA Listing 🇨🇦</span>
+            <span>Visit Amazon CA Store 🇨🇦</span>
             <ExternalLink className="w-4 h-4 text-white" />
           </a>
         </div>
@@ -206,7 +208,7 @@ export default function App() {
                 {'★'.repeat(5)}
               </div>
               <p className="text-xs text-[#23313B] font-semibold italic leading-relaxed">
-                "We bought the Cream & Yellow Crab teether. It's so easy for little hands to hold solo! I love that Infyra follows strict Canadian safety standards."
+                "We bought the Cream Yellow Crab teether. It's so easy for little hands to hold solo! I love that Infyra follows strict Canadian safety standards."
               </p>
               <div className="pt-3 border-t border-[#E4DCD0] text-xs">
                 <p className="font-heading font-extrabold text-[#23313B]">Emily K.</p>
@@ -241,9 +243,9 @@ export default function App() {
         <AnalyticsDashboard onClose={() => setShowAnalytics(false)} />
       )}
 
-      {showGuide && (
+      {/* {showGuide && (
         <FreeStrategyGuideModal onClose={() => setShowGuide(false)} />
-      )}
+      )} */}
 
     </div>
   );

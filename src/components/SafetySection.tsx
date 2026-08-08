@@ -130,8 +130,8 @@ export const SafetySection: React.FC = () => {
           <div className="shrink-0 flex items-center gap-3 bg-white/15 px-4 py-3 rounded-2xl border border-white/25">
             <span className="text-3xl">🧸</span>
             <div className="text-left">
-              <p className="text-xs font-extrabold font-heading text-white">Infyra Brand Canada</p>
-              <p className="text-xs text-white/90 font-bold">infyra.ca • Amazon Prime CA</p>
+              <p className="text-xs font-extrabold font-heading text-white">Infyra Baby</p>
+              <p className="text-xs text-white/90 font-bold">infyra.ca • Amazon CA</p>
             </div>
           </div>
         </div>

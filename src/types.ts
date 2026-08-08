@@ -11,6 +11,7 @@ export interface Product {
   dimensions: {
     height: string;
     width: string;
+    weight: string;
     handleOpening?: string;
     thickness?: string;
   };
@@ -67,6 +68,8 @@ export interface InstagramPostItem {
   caption: string;
   hashtags: string[];
   postType: string;
+  url: string;
+  imagePath: string;
   imageAlt: string;
   date: string;
 }

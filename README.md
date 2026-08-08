@@ -21,7 +21,7 @@
 ## ✨ Features
  
 - 🍁 **Canadian Safety First**: Highlights Health Canada & CCPSA 100% food-grade silicone certification.
-- 🧸 **Interactive Teether Visualizer**: Real-time rendered models for all 4 signature toys (Fresh Green Rattle, Dusty Blue Rattle, Slate Grey Crocodile Pop-It, Cream & Yellow Crab).
+- 🧸 **Interactive Teether Visualizer**: Real-time rendered models for all 4 signature toys (Fresh Green Rattle, Ocean Blue Rattle, Stone Grey Crocodile Pop-It, Cream Yellow Crab).
 - 📐 **Precision Dimensions Modal**: 1:1 scale specifications, sensory nub breakdown, and age safety details.
 - 🇨🇦 **Seamless Amazon CA Integration**: Direct Amazon Prime Canada referral links and copyable storefront URLs.
 - 📊 **Store Owner Analytics**: Live metric tracking for conversions, Amazon referral clicks, and newsletter signups.
