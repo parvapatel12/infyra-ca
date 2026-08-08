@@ -32,7 +32,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
   // Color theme mapping
   const getThemeClasses = () => {
     switch (product.id) {
-      case 'rattle-green':
+      case 'fresh-green-rattle':
         return {
           border: 'border-[#849C81] hover:border-[#6B8368]',
           badgeBg: 'bg-[#EFF4EE] text-[#2B4B28] border-[#849C81]',
@@ -40,7 +40,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
           checkIcon: 'text-[#849C81]',
           starColor: 'fill-amber-400 text-amber-500',
         };
-      case 'rattle-blue':
+      case 'ocean-blue-rattle':
         return {
           border: 'border-[#54758D] hover:border-[#3F5B70]',
           badgeBg: 'bg-[#EBF1F5] text-[#1E3A4E] border-[#54758D]',
@@ -48,7 +48,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
           checkIcon: 'text-[#54758D]',
           starColor: 'fill-amber-400 text-amber-500',
         };
-      case 'crocodile-grey':
+      case 'grey-crocodile-teether':
         return {
           border: 'border-[#64748B] hover:border-[#475569]',
           badgeBg: 'bg-[#F1F5F9] text-[#334155] border-[#64748B]',
@@ -56,7 +56,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
           checkIcon: 'text-[#64748B]',
           starColor: 'fill-amber-400 text-amber-500',
         };
-      case 'crab-yellow':
+      case 'cream-yellow-crab-teether':
       default:
         return {
           border: 'border-[#D97706] hover:border-[#B45309]',

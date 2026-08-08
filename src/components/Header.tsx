@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnalyticsService } from '../services/analytics';
-import { BarChart3, Instagram, ShieldCheck, Sparkles } from 'lucide-react';
+import { BarChart3, Instagram, ShieldCheck, ShoppingBag, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
   onOpenAnalytics: () => void;
@@ -11,6 +11,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
   const handleInstagramClick = () => {
     AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
     window.open('https://www.instagram.com/infyra.ca', '_blank');
+  };
+
+  const handleAmazonClick = () => {
+    AnalyticsService.trackEvent('amazon_click', {
+      productName: 'Amazon CA Storefront Redirect (Header)',
+      targetUrl: 'https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2',
+    });
+    window.open('https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2', '_blank');
   };
 
   return (
@@ -76,6 +84,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
             >
               <Instagram className="w-4 h-4 text-[#E5624E]" />
               <span className="hidden sm:inline">Instagram</span>
+            </button>
+
+            <button
+              onClick={handleAmazonClick}
+              className="relative inline-flex items-center gap-1.5 px-4 py-2 text-xs font-extrabold text-white bg-[#E5624E] hover:bg-[#D34F3C] rounded-xl transition-all shadow-xs"
+              title="Visit Infyra Amazon Store"
+            >
+              <ShoppingBag className="w-5 h-5 text-white/90" />
+              <span className="hidden lg:inline">Amazon</span>
             </button>
 
             {/* <button

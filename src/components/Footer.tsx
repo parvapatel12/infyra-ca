@@ -90,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
           {/* Socials & Owner Tools */}
           <div className="md:col-span-3 space-y-3">
             <p className="text-xs font-extrabold uppercase tracking-wider text-amber-400 font-heading">
-              Community & Analytics
+              Community
             </p>
             <div className="space-y-2.5">
               <button

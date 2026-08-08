@@ -31,9 +31,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF4EC] text-[#23313B] font-sans antialiased selection:bg-[#FDEEEB] selection:text-[#E5624E]"
-      style={{ backgroundImage: 'url(/assets/BackgroundPattern.png)', backgroundRepeat: 'repeat', backgroundSize: 'auto'}}
-    >
+    <div className="min-h-screen bg-[#FAF4EC] text-[#23313B] font-sans antialiased selection:bg-[#FDEEEB] selection:text-[#E5624E]">
       
       {/* Header */}
       <Header
