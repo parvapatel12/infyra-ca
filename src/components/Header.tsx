@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
           {/* Brand Logo & Slogan matching Logo exact palette */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-15 h-15 rounded-2xl p-1 group-hover:scale-105 transition-transform">
-              <img src="./assets/BrandLogo2.png" alt="Infyra Logo" className="w-full h-full object-contain" />
+              <img src="assets/BrandLogo2.png" alt="Infyra Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">

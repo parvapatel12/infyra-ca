@@ -1,7 +1,7 @@
 # 🧸 Infyra (`infyra.ca`)
 <!-- ![Infyra Logo](./assets/BrandLogo1.png) -->
 <p align="center">
-    <img src="./assets/BrandLogo1.png" alt="Infyra Logo" width="500">
+    <img src="./assets/BrandLogo1.png" alt="Infyra Logo" width="250">
 </p>
 
 <p align="center">
