@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-[#FAF4EC] border-b-2 border-[#E4DCD0] py-12 lg:py-20"
       style={{ 
-        backgroundImage: 'url(/public/assets/Background7.png)',
+        backgroundImage: 'url(/assets/Background7.png)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'auto',
