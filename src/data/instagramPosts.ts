@@ -1,0 +1,67 @@
+import { InstagramPostItem } from '../types';
+
+export const INSTAGRAM_POSTS: InstagramPostItem[] = [
+  {
+    id: 1,
+    title: '✨ Welcome to Infyra',
+    caption: 'Our journey begins with a simple, heartfelt promise: cuddle. play. comfort. We know parenthood is a beautiful, playful adventure—and it deserves products that match that joy!',
+    hashtags: ['#Infyra', '#CuddlePlayComfort', '#BabyTeethers', '#CanadianBabyBrand', '#PremiumBabyProducts'],
+    postType: 'Brand Launch',
+    imageAlt: 'Infyra mascot introduction post',
+    date: 'August 2026',
+  },
+  {
+    id: 4,
+    title: '🚗 First Stop: The Dream Design Dome',
+    caption: 'Buckle up, the road trip to Infyra Land has officially begun! Our very first stop? The Dream Design Dome! Every cute shape, soft texture, and playful detail is thoughtfully sketched here with love.',
+    hashtags: ['#Infyra', '#BabyTeethers', '#PremiumBabyProducts', '#CanadianBabyBrand', '#BabyMustHaves'],
+    postType: 'Infyra Land Tour',
+    imageAlt: 'Infyra Design Dome diorama',
+    date: 'August 2026',
+  },
+  {
+    id: 7,
+    title: '🏰 Floating High to Care & Compliance Castle',
+    caption: 'Up here, our dedicated little team takes safety very seriously! Every single one of our teethers undergoes rigorous lab testing and compliance checks to proudly meet strict Canadian standards. 🍁',
+    hashtags: ['#Infyra', '#BabyTeethers', '#PremiumBabyProducts', '#CanadianBabyBrand', '#BabyMustHaves'],
+    postType: 'Safety & Certifications',
+    imageAlt: 'Infyra Care & Compliance Castle diorama',
+    date: 'August 2026',
+  },
+  {
+    id: 12,
+    title: '✨ Meet the Fresh Green 2-in-1 Rattle & Teether',
+    caption: 'Teether, pop-it, and gentle rattle—all in one smart sensory design! Engineered with 5 unique textures for tender gums and an easy-grip handle. Available on Amazon Canada now!',
+    hashtags: ['#Infyra', '#CanadianMoms', '#BabyTeether', '#BabyRegistryMustHaves', '#SensoryToys'],
+    postType: 'Product Spotlight',
+    imageAlt: 'Fresh Green 2-in-1 Rattle & Teether spotlight',
+    date: 'August 2026',
+  },
+  {
+    id: 15,
+    title: '🦀 Meet our Silicone Crab Teether!',
+    caption: 'A wave of relief for tender gums! Designed with an easy-grip shape for little hands and packed with multi-textured claws and legs to soothe sore gums from every angle.',
+    hashtags: ['#Infyra', '#BabyTeether', '#SensoryToys', '#CanadianMoms', '#BabyRegistryMustHaves'],
+    postType: 'Product Spotlight',
+    imageAlt: 'Cream & Yellow Crab Teether spotlight',
+    date: 'August 2026',
+  },
+  {
+    id: 18,
+    title: '☁️ Floating on Cloud Nine: Dusty Blue Debut',
+    caption: 'When teething gets tough, we bring the dreamland to you! Meet the Dusty Blue 2-in-1 Rattle & Teether—designed in a soothing, soft slate-blue shade to calm tender gums.',
+    hashtags: ['#Infyra', '#DustyBlueTeether', '#BabyTeethingRelief', '#SensoryPlaytime', '#NurseryEssentials'],
+    postType: 'Product Launch',
+    imageAlt: 'Dusty Blue Teether in nursery setting',
+    date: 'August 2026',
+  },
+  {
+    id: 22,
+    title: '🐊 High-Chair Sidekick: Crocodile Pop-It Teether',
+    caption: 'Mealtime prep just got 10x quieter! While you are getting lunch ready, tiny hands are busy exploring 5 different sensory pop-it textures. Grab yours on Amazon Canada today!',
+    hashtags: ['#Infyra', '#AmazonBaby', '#CrocodileTeether', '#TeethingRelief', '#SensoryToy'],
+    postType: 'Lifestyle In Action',
+    imageAlt: 'Grey Crocodile Teether in high chair',
+    date: 'August 2026',
+  }
+];

@@ -1,0 +1,6 @@
+{
+  "name": "Infyra - Premium Baby Teethers",
+  "description": "Official brand website for Infyra baby teethers - cuddle. play. comfort. Showcasing safe, lab-tested Canadian baby products with direct Amazon CA redirection & visitor analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
