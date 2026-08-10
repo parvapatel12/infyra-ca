@@ -121,7 +121,7 @@ export const SafetySection: React.FC = () => {
         <div className="mt-12 bg-[#54758D] rounded-3xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm border-2 border-[#3F5B70]">
           <div className="space-y-1 text-center sm:text-left">
             <p className="text-xs font-extrabold uppercase tracking-wider text-[#EFF4EE] font-heading">
-              Canadian Quality Assurance 🇨🇦
+              Canadian Quality Assurance
             </p>
             <p className="text-lg sm:text-xl font-heading font-extrabold text-white">
               "We know that parenthood is a beautiful, playful adventure—and it deserves products that match that joy."

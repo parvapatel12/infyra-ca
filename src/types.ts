@@ -47,6 +47,8 @@ export interface AnalyticsEvent {
     city: string;
     ip?: string;
   };
+  browser?: string;
+  os?: string;
 }
 
 export interface LeadSubscriber {

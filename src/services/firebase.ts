@@ -54,6 +54,30 @@ export class FirebaseService {
         }
     }
 
+    public static getBrowserAndOS() {
+        const ua = navigator.userAgent;
+
+        // Detect Browser
+        let browser = "Unknown Browser";
+        if (ua.includes("Firefox/")) browser = "Firefox";
+        else if (ua.includes("SamsungBrowser/")) browser = "Samsung Internet";
+        else if (ua.includes("Opera/") || ua.includes("OPR/")) browser = "Opera";
+        else if (ua.includes("Trident/")) browser = "Internet Explorer";
+        else if (ua.includes("Edge/") || ua.includes("Edg/")) browser = "Microsoft Edge";
+        else if (ua.includes("Chrome/")) browser = "Chrome";
+        else if (ua.includes("Safari/")) browser = "Safari";
+
+        // Detect OS
+        let os = "Unknown OS";
+        if (ua.includes("Win")) os = "Windows";
+        else if (ua.includes("Mac")) os = "MacOS";
+        else if (ua.includes("Linux")) os = "Linux";
+        else if (ua.includes("Android")) os = "Android";
+        else if (ua.includes("like Mac")) os = "iOS";
+
+        return { browser, os };
+    }
+
     public static async getEvents(): Promise<AnalyticsEvent[]> {
         try {
             // Create a query pointing to the "Events" collection, ordered by newest first
@@ -76,7 +100,9 @@ export class FirebaseService {
                     targetUrl: data.targetUrl,
                     deviceType: data.deviceType,
                     referrer: data.referrer,
-                    location: data.location || { country: "", state: "", city: "" }
+                    location: data.location || { country: "", state: "", city: "" },
+                    browser: data.browser,
+                    os: data.os
                 } as AnalyticsEvent);
             });
             return events;
@@ -120,6 +146,7 @@ export class FirebaseService {
     ) {
         try {
             const locationInfo = await this.fetchUserLocation(); // Fetches location in background
+            const { browser, os } = this.getBrowserAndOS(); // Extract browser and OS
             const newEvent: AnalyticsEvent = {
                 id: 'evt_' + Math.random().toString(36).substring(2, 9),
                 timestamp: serverTimestamp(),
@@ -129,7 +156,9 @@ export class FirebaseService {
                 targetUrl: details?.targetUrl ?? "",
                 deviceType: this.getDeviceType(),
                 referrer: document.referrer || 'direct / infyra.ca',
-                location: locationInfo
+                location: locationInfo,
+                browser,
+                os
             };
 
             await addDoc(collection(db, "Events"), {
@@ -175,7 +204,7 @@ export class FirebaseService {
         const events = await this.getEvents();
         const leads = await this.getLeads();
 
-        const uniqueSessions = new Set(events.map(e => e.id.split('_')[1] || e.id)).size || (events.length > 0 ? 1 : 0);
+        const uniqueSessions = new Set(events.map(e => e.location?.ip || 'Unknown')).size || (events.length > 0 ? 1 : 0);
         const totalPageViews = events.filter(e => e.type === 'page_view').length;
         const amazonClicks = events.filter(e => e.type === 'amazon_click');
         const instagramClicks = events.filter(e => e.type === 'instagram_click').length;
@@ -208,10 +237,10 @@ export class FirebaseService {
 
         let csvContent = 'data:text/csv;charset=utf-8,';
         csvContent += '--- INFYRA.CA VISITOR EVENTS ---\n';
-        csvContent += 'Event ID,Timestamp,Event Type,Product Name,Target URL,Device Type,Referrer\n';
+        csvContent += 'Event ID,Timestamp,Event Type,Product Name,Target URL,Device Type,Referrer,City,State,Country,IP Address,Browser,OS\n';
 
         events.forEach(e => {
-            csvContent += `"${e.id}","${e.timestamp}","${e.type}","${e.productName || ''}","${e.targetUrl || ''}","${e.deviceType}","${e.referrer}"\n`;
+            csvContent += `"${e.id}","${e.timestamp}","${e.type}","${e.productName || ''}","${e.targetUrl || ''}","${e.deviceType}","${e.referrer}","${e.location?.city || 'Unknown'}","${e.location?.state || 'Unknown'}","${e.location?.country || 'Unknown'}","${e.location?.ip || 'Unknown'}","${e.browser || 'Unknown'}","${e.os || 'Unknown'}"\n`;
         });
 
         csvContent += '\n--- INFYRA SUBSCRIBER LEADS ---\n';

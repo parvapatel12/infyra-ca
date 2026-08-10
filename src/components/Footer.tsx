@@ -21,6 +21,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
     window.open(url, '_blank');
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 relative overflow-hidden">
       {/* Decorative colored glow in footer */}
@@ -28,36 +35,36 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12 relative z-10">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
-          
+
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
               {/* <div className="w-12 h-12 rounded-2xl bg-[#E5624E] flex items-center justify-center text-2xl shadow-xs border-2 border-white/20">
                 
               </div> */}
               <img src="/assets/BrandLogo2.png" alt="Infyra Logo" className="w-12 h-12 object-contain" />
               <div>
                 <span className="text-2xl font-heading font-extrabold text-white tracking-wider">infyra</span>
-                <p className="text-xs font-bold text-[#F5C2B9] font-heading">cuddle • play • comfort</p>
+                <p className="text-xs font-bold text-[#F5C2B9] font-heading">cuddle. play. comfort.</p>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed font-semibold max-w-sm">
-              Infyra is a Canadian baby brand dedicated to premium, safe, and thoughtfully designed teething solutions. Tested and certified to strict Canadian safety standards.
+              Infyra was started with a simple dream: to craft safe, soothing essentials that bring bright smiles to little faces and gentle comfort to everyday play.
             </p>
 
-            <div className="flex items-center gap-2 pt-1 text-xs text-slate-300 font-bold bg-slate-800/80 px-3 py-2 rounded-xl w-fit border border-slate-700">
+            {/* <div className="flex items-center gap-2 pt-1 text-xs text-slate-300 font-bold bg-slate-800/80 px-3 py-2 rounded-xl w-fit border border-slate-700">
               <span className="text-base">🇨🇦</span>
               <span>Official Website: <strong className="text-[#F5C2B9]">infyra.ca</strong></span>
-            </div>
+            </div> */}
           </div>
 
           {/* Direct Amazon CA Links */}
           <div className="md:col-span-4 space-y-3">
             <p className="text-xs font-extrabold uppercase tracking-wider text-[#E5624E] font-heading">
-              Amazon CA Storefront 🇨🇦
+              Amazon CA Storefront
             </p>
             <ul className="space-y-2 text-xs font-semibold text-slate-300">
               <li>
@@ -128,6 +135,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
             <span>Crafted with care for Canadian parents & growing babies 💖</span>
           </p>
         </div>
+
+        {/* <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white font-semibold rounded-xl border border-slate-700 transition-all shadow-md group"
+        >
+          <span>Back to top</span>
+          <svg
+            className="w-3.5 h-3.5 text-emerald-400 group-hover:-translate-y-0.5 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button> */}
 
       </div>
     </footer>

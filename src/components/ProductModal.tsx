@@ -31,8 +31,10 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-xs overflow-y-auto">
-      <div className="bg-[#FFFBF6] w-full max-w-4xl rounded-3xl shadow-xl border-2 border-[#E4DCD0] overflow-hidden relative my-8 animate-in fade-in zoom-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-xs">
+      <div className="bg-[#FFFBF6] w-full max-w-4xl rounded-3xl shadow-xl border-2 border-[#E4DCD0] overflow-hidden relative my-8 animate-in fade-in zoom-in duration-200 overflow-y-auto"
+        style={{ maxHeight: '90vh' }}
+      >
         
         {/* Close Button */}
         <button
@@ -163,7 +165,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 onClick={handleAmazonRedirect}
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#E5624E] hover:bg-[#D34F3C] text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xs transition-all border-2 border-[#D34F3C]"
               >
-                <span>Buy On Amazon Canada 🇨🇦</span>
+                <span>Buy On Amazon Canada</span>
                 <ExternalLink className="w-4 h-4 text-white" />
               </button>
 

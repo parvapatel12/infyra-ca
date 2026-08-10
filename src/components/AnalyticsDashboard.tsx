@@ -226,8 +226,10 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ onClose 
                           <th className="p-3">Event Type</th>
                           <th className="p-3">Product / Detail</th>
                           <th className="p-3">Device</th>
-                          <th className="p-3">Referrer</th>
+                          {/* <th className="p-3">Referrer</th> */}
                           <th className="p-3">Location</th>
+                          <th className="p-3">Browser</th>
+                          {/* <th className="p-3">OS</th> */}
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-800 text-slate-300">
@@ -239,7 +241,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ onClose 
                           events.map(e => (
                             <tr key={e.id} className="hover:bg-slate-800/50">
                               <td className="p-3 font-mono text-slate-400">
-                                {e.timestamp ? new Date(e.timestamp).toLocaleTimeString() : 'Just now'}
+                                {e.timestamp ? (new Date(e.timestamp).toLocaleString('en-US', {dateStyle: 'short', timeStyle: 'short'})) : 'Just now'}
                               </td>
                               <td className="p-3">
                                 <span className={`px-2 py-0.5 rounded-full font-bold text-[10px] ${
@@ -252,8 +254,10 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ onClose 
                               </td>
                               <td className="p-3 font-medium text-white">{e.productName || '-'}</td>
                               <td className="p-3 uppercase text-[10px]">{e.deviceType || 'desktop'}</td>
-                              <td className="p-3 text-slate-400 truncate max-w-xs">{e.referrer || 'direct'}</td>
+                              {/* <td className="p-3 text-slate-400 truncate max-w-xs">{e.referrer || 'direct'}</td> */}
                               <td className="p-3 text-slate-400">{[e.location?.city, e.location?.state, e.location?.country].filter(Boolean).join(', ') || 'Unknown'}</td>
+                              <td className="p-3 text-slate-400">{e.browser || 'Unknown'}</td>
+                              {/* <td className="p-3 text-slate-400">{e.os || 'Unknown'}</td> */}
                             </tr>
                           ))
                         )}

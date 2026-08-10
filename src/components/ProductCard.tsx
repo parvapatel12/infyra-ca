@@ -115,14 +115,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
           </p>
 
           {/* Feature Bullets */}
-          <ul className="space-y-1.5 pt-2 text-xs font-bold text-[#23313B]">
+          {/* <ul className="space-y-1.5 pt-2 text-xs font-bold text-[#23313B]">
             {product.keyFeatures.slice(0, 3).map((feat, idx) => (
               <li key={idx} className="flex items-start gap-1.5">
                 <CheckCircle2 className={`w-4 h-4 ${theme.checkIcon} shrink-0 mt-0.5`} />
                 <span className="line-clamp-1">{feat}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
           onClick={handleAmazonRedirect}
           className="w-full py-3 text-center text-xs font-extrabold bg-[#E5624E] hover:bg-[#D34F3C] text-white rounded-2xl shadow-xs transition-all inline-flex items-center justify-center gap-2 transform active:scale-95 border border-[#D34F3C]"
         >
-          <span>Buy on Amazon CA 🇨🇦</span>
+          <span>Buy on Amazon CA</span>
           <ExternalLink className="w-3.5 h-3.5 text-white/90" />
         </button>
 

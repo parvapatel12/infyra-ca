@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
     <header className="sticky top-0 z-40 bg-[#FFFBF6] border-b-2 border-[#E4DCD0] shadow-xs">
       {/* Canadian Safety Trust Banner - Solid Slate Blue */}
       <div className="bg-[#54758D] text-white text-xs sm:text-sm py-2 px-4 text-center font-bold tracking-wide flex items-center justify-center gap-2">
-        <span className="text-base">🇨🇦</span>
+        {/* <span className="text-base">🇨🇦</span> */}
         <span>Tested & Certified to Strict Canadian Safety Standards</span>
         <span className="hidden sm:inline-block border-l border-white/30 pl-2.5 font-semibold text-white/90">
           100% Food-Grade Silicone • BPA-Free • Fast Shipping via Amazon CA
@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) 
                 </span>
               </div>
               <p className="text-xs font-extrabold tracking-wider text-[#E5624E] font-heading">
-                cuddle • play • comfort
+                cuddle<span className="text-[#54758D]">.</span> play<span className="text-[#54758D]">.</span> comfort<span className="text-[#54758D]">.</span>
               </p>
             </div>
           </a>

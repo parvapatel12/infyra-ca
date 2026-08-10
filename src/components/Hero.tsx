@@ -42,14 +42,15 @@ export const Hero: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-[#23313B] leading-[1.15] tracking-wide">
               Gentle Soothing & Fun for Growing Smiles!
               <span className="block text-2xl sm:text-3xl font-heading font-extrabold text-[#E5624E] mt-2">
-                cuddle • play • comfort
+                cuddle<span className="text-[#54758D]">.</span> play<span className="text-[#54758D]">.</span> comfort<span className="text-[#54758D]">.</span>
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#5B6B76] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-semibold">
-              Premium, ultra-safe, and thoughtfully designed baby teething toys for your little ones.
-              Made with 100% food-grade silicone, soft rattle sounds, and lab-certified Canadian relief!
+              Premium, ultra-safe, and thoughtfully designed baby teething toys!
+              {/* for your little ones.
+              Made with 100% food-grade silicone, soft rattle sounds, and lab-certified Canadian relief! */}
             </p>
 
             {/* Key Trust Highlights */}
@@ -69,8 +70,8 @@ export const Hero: React.FC = () => {
                   <Heart className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-extrabold font-heading text-[#23313B]">100% Silicone</p>
-                  <p className="text-[11px] text-[#E5624E] font-bold">BPA-Free Safe</p>
+                  <p className="text-xs font-extrabold font-heading text-[#23313B]">100% Food Grade</p>
+                  <p className="text-[11px] text-[#E5624E] font-bold">BPA-Free Silicone</p>
                 </div>
               </div>
 
@@ -79,7 +80,7 @@ export const Hero: React.FC = () => {
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-extrabold font-heading text-[#23313B]">5 Sensory Nubs</p>
+                  <p className="text-xs font-extrabold font-heading text-[#23313B]">Multi Sensory Nubs</p>
                   <p className="text-[11px] text-[#54758D] font-bold">Motor Skills</p>
                 </div>
               </div>
@@ -92,7 +93,7 @@ export const Hero: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E5624E] hover:bg-[#D34F3C] text-white text-sm font-extrabold rounded-2xl shadow-sm transition-all group transform active:scale-95 border-2 border-[#D34F3C]"
               >
                 <ShoppingBag className="w-5 h-5 text-white/90" />
-                <span>Shop Official Amazon CA Store 🇨🇦</span>
+                <span>Shop Official Amazon CA Store</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -127,7 +128,7 @@ export const Hero: React.FC = () => {
               <div className="grid grid-cols-2 gap-3">
                 <a href="#products" className="group bg-[#EFF4EE] p-3.5 rounded-2xl border-2 border-[#849C81] hover:bg-[#E2ECE1] transition-all flex flex-col items-center text-center shadow-xs">
                   {/* <TeetherVisual type="rattle-green" size="sm" /> */}
-                  <img src="/assets/RattleTeetherGreen1.png" alt="Rattle Teether Green" className="w-30 h-30 h-full object-contain drop-shadow-md" />
+                  <img src="/assets/RattleTeetherGreen1.png" alt="Rattle Teether Green" className="w-30 h-30 h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#849C81]">
                     Fresh Green
                   </span>
@@ -136,7 +137,7 @@ export const Hero: React.FC = () => {
 
                 <a href="#products" className="group bg-[#EBF1F5] p-3.5 rounded-2xl border-2 border-[#54758D] hover:bg-[#DDE8F0] transition-all flex flex-col items-center text-center shadow-xs">
                   {/* <TeetherVisual type="rattle-blue" size="sm" /> */}
-                  <img src="/assets/RattleTeetherBlue1.png" alt="Rattle Teether Blue" className="w-30 h-30 h-full object-contain drop-shadow-md" />
+                  <img src="/assets/RattleTeetherBlue1.png" alt="Rattle Teether Blue" className="w-30 h-30 h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#54758D]">
                     Ocean Blue
                   </span>
@@ -145,16 +146,16 @@ export const Hero: React.FC = () => {
 
                 <a href="#products" className="group bg-[#F1F5F9] p-3.5 rounded-2xl border-2 border-[#64748B] hover:bg-[#E2E8F0] transition-all flex flex-col items-center text-center shadow-xs">
                   {/* <TeetherVisual type="crocodile-grey" size="sm" /> */}
-                  <img src="/assets/CrocodileTeether1.png" alt="Crocodile Teether" className="w-25 h-25 h-full object-contain drop-shadow-md" />
+                  <img src="/assets/CrocodileTeether1.png" alt="Crocodile Teether" className="w-25 h-25 h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#64748B]">
-                    Slate Grey
+                    Stone Grey
                   </span>
                   <span className="text-[10px] font-bold text-[#64748B]">Crocodile Pop-It</span>
                 </a>
 
                 <a href="#products" className="group bg-[#FEF3C7] p-3.5 rounded-2xl border-2 border-[#D97706] hover:bg-[#FDE68A] transition-all flex flex-col items-center text-center shadow-xs">
                   {/* <TeetherVisual type="crab-yellow" size="sm" /> */}
-                  <img src="/assets/CrabTeether1.png" alt="Crab Teether" className="w-30 h-30 h-full object-contain drop-shadow-md" />
+                  <img src="/assets/CrabTeether1.png" alt="Crab Teether" className="w-30 h-30 h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
                   <span className="text-xs font-heading font-extrabold text-[#23313B] mt-2 group-hover:text-[#D97706]">
                     Cream Yellow
                   </span>

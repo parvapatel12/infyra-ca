@@ -61,10 +61,13 @@ export default function App() {
               <span>Signature Teether Toy Collection 🧸</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#23313B]">
-              Our 4 Signature Baby Teethers
+              Our Signature Baby Teethers
             </h2>
+            <p className="text-sm text-[#5B6B76] mt-3 font-semibold max-w-2xl leading-relaxed">
+              Engineered with 100% food-grade silicone, multi-sensory textures, and gentle rattle sounds. 
+            </p>
             <p className="text-sm text-[#5B6B76] mt-1 font-semibold max-w-2xl leading-relaxed">
-              Engineered with 100% food-grade silicone, multi-sensory textures, and gentle rattle sounds. Select any teether to view detailed dimensions or order directly on Amazon Canada!
+              Select any teether to view detailed dimensions or order directly on Amazon Canada!
             </p>
           </div>
 
@@ -89,7 +92,7 @@ export default function App() {
                   : 'text-[#5B6B76] hover:bg-[#EFF4EE]'
               }`}
             >
-              Fresh Green
+              Green Rattle
             </button>
             <button
               onClick={() => setFilterColor('blue')}
@@ -99,7 +102,7 @@ export default function App() {
                   : 'text-[#5B6B76] hover:bg-[#EBF1F5]'
               }`}
             >
-              Ocean Blue
+              Blue Rattle
             </button>
             <button
               onClick={() => setFilterColor('crocodile')}
@@ -142,7 +145,7 @@ export default function App() {
               <ShoppingBag className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="text-lg font-heading font-extrabold text-white">Direct Fast Delivery via Amazon Canada 🇨🇦</p>
+              <p className="text-lg font-heading font-extrabold text-white">Direct Fast Delivery via Amazon Canada</p>
               <p className="text-xs text-white/90 font-bold mt-0.5">All product links take visitors directly to our official Amazon CA listing for fast shipping across provinces!</p>
             </div>
           </div>
@@ -152,7 +155,7 @@ export default function App() {
             rel="noreferrer"
             className="shrink-0 px-7 py-3.5 bg-[#54758D] hover:bg-[#3F5B70] text-white text-xs font-extrabold rounded-2xl shadow-xs transition-all inline-flex items-center gap-2 border border-[#3F5B70]"
           >
-            <span>Visit Amazon CA Store 🇨🇦</span>
+            <span>Visit Amazon CA Store</span>
             <ExternalLink className="w-4 h-4 text-white" />
           </a>
         </div>

@@ -3,7 +3,7 @@ import { Product } from '../types';
 export const PRODUCTS: Product[] = [
   {
     id: 'fresh-green-rattle',
-    name: 'Infyra 2-in-1 Rattle & Teether',
+    name: '2-in-1 Rattle Teether',
     subtitle: 'Smart Sensory Chew Toy with Soft Sound & Easy Grip',
     colorName: 'Fresh Green',
     colorHex: '#4A7C59',
@@ -63,7 +63,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'ocean-blue-rattle',
-    name: 'Infyra 2-in-1 Rattle & Teether',
+    name: '2-in-1 Rattle Teether',
     subtitle: 'Soothing Slate Blue Edition for Calm Sensory Play',
     colorName: 'Ocean Blue',
     colorHex: '#5B7C99',
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'grey-crocodile-teether',
-    name: 'Infyra Crocodile Pop-It Teether',
+    name: 'Crocodile Pop-It Teether',
     subtitle: 'Multi-Textured Sensory Gator with Tail Handle',
     colorName: 'Matte Stone Grey',
     colorHex: '#64748B',
@@ -182,7 +182,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'cream-yellow-crab-teether',
-    name: 'Infyra Silicone Crab Teether',
+    name: 'Silicone Crab Teether',
     subtitle: 'Multi-Colored Ocean Friend with Star Claws & Wave Legs',
     colorName: 'Cream Yellow',
     colorHex: '#D97706',
