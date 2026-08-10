@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Product } from '../types';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { TeetherVisual } from './TeetherVisual';
 import { X, ExternalLink, ShieldCheck, CheckCircle2, Copy, Check, Star, Sparkles, Heart } from 'lucide-react';
 import { TeetherImage } from './TeetherImage';
@@ -16,7 +16,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   if (!product) return null;
 
   const handleAmazonRedirect = () => {
-    AnalyticsService.trackEvent('amazon_click', {
+    FirebaseService.trackEvent('amazon_click', {
       productId: product.id,
       productName: product.name + ` (${product.colorName})`,
       targetUrl: product.amazonUrl,

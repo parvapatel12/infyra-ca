@@ -1,11 +1,11 @@
 import React from 'react';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { ShieldCheck, ShoppingBag, ArrowRight, Heart, Award, Sparkles } from 'lucide-react';
 import { TeetherVisual } from './TeetherVisual';
 
 export const Hero: React.FC = () => {
   const handleAmazonCaMainClick = () => {
-    AnalyticsService.trackEvent('amazon_click', {
+    FirebaseService.trackEvent('amazon_click', {
       productName: 'Amazon CA Storefront Redirect (Hero)',
       targetUrl: 'https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2',
     });
@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden bg-[#FAF4EC] border-b-2 border-[#E4DCD0] py-12 lg:py-20"
-      style={{ 
+      style={{
         backgroundImage: 'url(/assets/Background7.png)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
@@ -25,10 +25,10 @@ export const Hero: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
+
           {/* Left Column: Brand Story & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
+
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 bg-[#EBF1F5] border-2 border-[#CBD8E1] px-4 py-1.5 rounded-full text-xs font-extrabold text-[#54758D] shadow-xs">
               <span className="text-base">🍁</span>
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
           {/* Right Column: Featured Teethers Visual Grid */}
           <div className="lg:col-span-5 relative">
             <div className="bg-[#FFFBF6] rounded-3xl p-6 border-2 border-[#E4DCD0] shadow-md relative">
-              
+
               <div className="flex items-center justify-between pb-4 border-b-2 border-[#E4DCD0] mb-4">
                 <span className="text-xs font-extrabold uppercase tracking-wider text-[#54758D] font-heading">
                   ✨ Signature Toy Collection

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { BarChart3, Instagram, ShieldCheck, ShoppingBag, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
@@ -9,12 +9,12 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenAnalytics, onOpenGuide }) => {
   const handleInstagramClick = () => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
+    FirebaseService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
     window.open('https://www.instagram.com/infyra.ca', '_blank');
   };
 
   const handleAmazonClick = () => {
-    AnalyticsService.trackEvent('amazon_click', {
+    FirebaseService.trackEvent('amazon_click', {
       productName: 'Amazon CA Storefront Redirect (Header)',
       targetUrl: 'https://www.amazon.ca/s?me=A3GUNQCRP94MEZ&marketplaceID=A2EUQ1WTGCTBG2',
     });

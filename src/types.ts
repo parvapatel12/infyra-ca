@@ -34,20 +34,26 @@ export interface Product {
 
 export interface AnalyticsEvent {
   id: string;
-  timestamp: string;
+  timestamp: any; // Uses serverTimestamp()
   type: 'page_view' | 'product_view' | 'amazon_click' | 'instagram_click' | 'lead_capture' | 'story_view';
   productId?: string;
   productName?: string;
   targetUrl?: string;
   deviceType: 'mobile' | 'desktop' | 'tablet';
   referrer: string;
+  location: {
+    country: string;
+    state: string;
+    city: string;
+    ip?: string;
+  };
 }
 
 export interface LeadSubscriber {
   id: string;
   email: string;
   name?: string;
-  subscribedAt: string;
+  subscribedAt: any; // Uses serverTimestamp()
   source: string;
 }
 

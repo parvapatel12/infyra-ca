@@ -1,11 +1,11 @@
 import React from 'react';
 import { INSTAGRAM_POSTS } from '../data/instagramPosts';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { Instagram, ExternalLink, Heart, MessageCircle } from 'lucide-react';
 
 export const InstagramFeed: React.FC = () => {
   const handleInstagramClick = (url: string) => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: url });
+    FirebaseService.trackEvent('instagram_click', { targetUrl: url });
     window.open(url, '_blank');
   };
 

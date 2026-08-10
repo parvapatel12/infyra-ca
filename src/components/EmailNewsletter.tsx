@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { Mail, CheckCircle, Sparkles, Heart } from 'lucide-react';
 
 export const EmailNewsletter: React.FC = () => {
@@ -7,12 +7,12 @@ export const EmailNewsletter: React.FC = () => {
   const [status, setStatus] = useState<{ success?: boolean; message?: string }>({});
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    setTimeout(() => {
-      const res = AnalyticsService.addLeadSubscriber(email);
+    setTimeout(async () => {
+      const res = await FirebaseService.addLeadSubscriber(email);
       setStatus(res);
       setLoading(false);
       if (res.success) {

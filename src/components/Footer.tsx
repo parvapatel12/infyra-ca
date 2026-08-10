@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { Instagram, ExternalLink, BarChart3, Sparkles } from 'lucide-react';
 
 interface FooterProps {
@@ -9,12 +9,12 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) => {
   const handleInstagramClick = () => {
-    AnalyticsService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
+    FirebaseService.trackEvent('instagram_click', { targetUrl: 'https://www.instagram.com/infyra.ca' });
     window.open('https://www.instagram.com/infyra.ca', '_blank');
   };
 
   const handleAmazonMainClick = (url: string) => () => {
-    AnalyticsService.trackEvent('amazon_click', {
+    FirebaseService.trackEvent('amazon_click', {
       productName: 'Amazon CA Storefront (Footer)',
       targetUrl: url,
     });
@@ -101,13 +101,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAnalytics, onOpenGuide }) 
                 <span>Instagram @infyra.ca</span>
               </button>
 
-              {/* <button
+              <button
                 onClick={onOpenAnalytics}
                 className="w-full inline-flex items-center gap-2 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold rounded-2xl transition-all border border-slate-700"
               >
                 <BarChart3 className="w-4 h-4 text-emerald-400" />
                 <span>Store Owner Analytics</span>
-              </button> */}
+              </button>
 
               {/* <button
                 onClick={onOpenGuide}

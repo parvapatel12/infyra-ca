@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product } from '../types';
-import { AnalyticsService } from '../services/analytics';
+import { FirebaseService } from '../services/firebase';
 import { TeetherVisual } from './TeetherVisual';
 import { ExternalLink, Star, CheckCircle2, Eye } from 'lucide-react';
 import { TeetherImage } from './TeetherImage';
@@ -13,7 +13,7 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProduct }) => {
   const handleAmazonRedirect = (e: React.MouseEvent) => {
     e.stopPropagation();
-    AnalyticsService.trackEvent('amazon_click', {
+    FirebaseService.trackEvent('amazon_click', {
       productId: product.id,
       productName: product.name + ` (${product.colorName})`,
       targetUrl: product.amazonUrl,
@@ -22,7 +22,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProdu
   };
 
   const handleCardClick = () => {
-    AnalyticsService.trackEvent('product_view', {
+    FirebaseService.trackEvent('product_view', {
       productId: product.id,
       productName: product.name + ` (${product.colorName})`,
     });

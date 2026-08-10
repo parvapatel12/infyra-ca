@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Product } from './types';
 import { PRODUCTS } from './data/products';
-import { AnalyticsService } from './services/analytics';
+import { FirebaseService } from './services/firebase';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProductCard } from './components/ProductCard';
@@ -14,15 +14,23 @@ import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { FreeStrategyGuideModal } from './components/FreeStrategyGuideModal';
 import { Footer } from './components/Footer';
 import { ShoppingBag, Heart, Sparkles, Filter, ExternalLink } from 'lucide-react';
+import { OwnerPasswordModal } from './components/OwnerPasswordModalPrompt';
 
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showAnalytics, setShowAnalytics] = useState(false);
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
   const [filterColor, setFilterColor] = useState<string>('all');
 
+  const handleOpenAnalyticsClick = () => {
+    // If they already unlocked it during this session, you can open directly, 
+    // otherwise prompt for password:
+    setShowPasswordModal(true);
+  };
+
   useEffect(() => {
-    AnalyticsService.initInitialPageView();
+    FirebaseService.initInitialPageView();
   }, []);
 
   const filteredProducts = PRODUCTS.filter(p => {
@@ -227,7 +235,7 @@ export default function App() {
 
       {/* Footer */}
       <Footer
-        onOpenAnalytics={() => setShowAnalytics(true)}
+        onOpenAnalytics={() => setShowPasswordModal(true)}
         onOpenGuide={() => setShowGuide(true)}
       />
 
@@ -236,6 +244,17 @@ export default function App() {
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}
       />
+
+      {/* Password Modal Prompt */}
+      {showPasswordModal && (
+        <OwnerPasswordModal
+          onClose={() => setShowPasswordModal(false)}
+          onSuccess={() => {
+            setShowPasswordModal(false);
+            setShowAnalytics(true);
+          }}
+        />
+      )}
 
       {showAnalytics && (
         <AnalyticsDashboard onClose={() => setShowAnalytics(false)} />
